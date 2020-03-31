@@ -1,0 +1,12 @@
+META-INF/spring-configuration-metadata.json
+pe/gob/minsa/kobo/config/AppConfig.class
+pe/gob/minsa/kobo/rowmapper/KoboDataRowMapper.class
+pe/gob/minsa/kobo/service/KoboDataServiceImpl.class
+pe/gob/minsa/kobo/McsKoboMqApplication.class
+pe/gob/minsa/kobo/controller/KoboDataController.class
+pe/gob/minsa/kobo/model/KoboData.class
+pe/gob/minsa/kobo/dao/impl/KoboDataDaoImpl.class
+pe/gob/minsa/kobo/dao/KoboDataDao.class
+pe/gob/minsa/kobo/service/KoboDataService.class
+pe/gob/minsa/kobo/config/SwaggerConfig.class
+pe/gob/minsa/kobo/mq/ActiveMqConfig.class

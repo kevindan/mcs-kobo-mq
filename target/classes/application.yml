@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /mcs-kobo-mq/
+
+spring:
+  aop:
+    proxy-target-class: true
+
+#logging:
+#  config: /opt/data/mcs-minsa/log/mcs-seguimiento-covid/config/log4j2-mcs-seguimiento-covid.xml
+       

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d [%t] %-5p %c - %m%n
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <RollingFile name="FileAppender" fileName="/opt/data/mcs-minsa/log/mcs-kobo-mq/mcs-kobo-mq.log"
+                 filePattern="mcs-seguimiento-covid-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <SizeBasedTriggeringPolicy size="10 MB" />
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+		<AsyncLogger name="pe.gob.minsa.kobo" level="DEBUG"/>
+        <AsyncLogger name="org.springframework" level="ERROR"/>
+        <AsyncLogger name="org.hibernate" level="ERROR"/>
+        <AsyncLogger name="org.jboss" level="ERROR"/>
+        <AsyncLogger name="org.apache" level="ERROR"/>
+        <AsyncLogger name="springfox.documentation.schema" level="ERROR"/>
+        <Root level="DEBUG">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>    
+        </Root>
+    </Loggers>
+</Configuration>
